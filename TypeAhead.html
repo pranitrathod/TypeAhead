@@ -22,8 +22,8 @@ fetch(endpoint)
              .then(rawData => cities.push(...rawData));
 function findCities(wordToMatch,cities)
 {
-    const regEx=new RegExp(wordToMatch,'gi');
-return cities.filter(place =>{return place.city.match(regEx) || place.state.match(regEx)});
+    const regExpression=new RegExp(wordToMatch,'gi');
+return cities.filter(place =>{return place.city.match(regExpression) || place.state.match(regExpression)});
 }
 
 function display()
