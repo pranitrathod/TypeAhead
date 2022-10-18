@@ -32,9 +32,9 @@ function display()
     
     const html=matchedValue.map(place =>{
 
-        
-        const cityHighlight=place.city.replace(this.value,`<span class="hl">${this.value}</span>`);
-        const stateHighlight=place.state.replace(this.value,`<span class="hl">${this.value}</span>`);
+        const regEx=new RegEx(this.value,"gi");
+        const cityHighlight=place.city.replace(regEx,`<span class="hl">${this.value}</span>`);
+        const stateHighlight=place.state.replace(regEx,`<span class="hl">${this.value}</span>`);
 
         return `<li><span class="name">${cityHighlight},${stateHighlight}</span>
                     <span class="population">${place.population}</span>            
